@@ -1,7 +1,21 @@
 {
   "name": "@penqwin/mcp",
   "version": "0.1.0",
-  "description": "MCP server that exposes AST skeleton tools from the Penqwin platform",
+  "license": "MIT",
+  "description": "An AST-based context router to reduce AI token usage. Provides code skeletons and structural symbols to LLM agents (Cursor, Claude, Antigravity) for efficient codebase context routing.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "context-router",
+    "token-optimization",
+    "ast",
+    "skeleton",
+    "llm",
+    "cursor",
+    "claude",
+    "antigravity",
+    "codebase-indexer"
+  ],
   "type": "module",
   "bin": {
     "penqwin-mcp": "dist/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@penqwin/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "An AST-based context router to reduce AI token usage. Provides code skeletons and structural symbols to LLM agents (Cursor, Claude, Antigravity) for efficient codebase context routing.",
   "keywords": [
@@ -30,6 +30,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "zod": "^3.23.8"

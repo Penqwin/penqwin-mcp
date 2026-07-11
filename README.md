@@ -20,57 +20,16 @@ The server registers 5 core tools with the MCP protocol:
 
 ---
 
-## Requirements
-
-- Node.js (v18+)
-- An active `penqwin` backend server (running locally or in production)
-- A valid API key generated from the `penqwin` platform
-
----
-
 ## Configuration
 
 The MCP server is configured entirely via environment variables.
 
-| Environment Variable | Description                                       | Example                                     |
-| :------------------- | :------------------------------------------------ | :------------------------------------------ |
-| `PENQWIN_API_KEY`    | Machine-to-machine API key generated from the DB  | `ed_live_0e21cf14...`                       |
-| `PENQWIN_ORG_ID`     | The organization ID associated with the API key   | `0db9f7b5-7206-...`                         |
-| `PENQWIN_REPO`       | The repository owner and name to target           | `sarinmsari/<repo_name>`                    |
-| `PENQWIN_API_URL`    | The REST API gateway URL of the `penqwin` backend | `http://localhost:3000` (or production URL) |
-
----
-
-## Setup & Running
-
-### 1. Install Dependencies
-
-```bash
-npm install
-```
-
-### 2. Build the Server
-
-The project uses `tsup` to bundle the TypeScript code into a single executable bundle:
-
-```bash
-npm run build
-```
-
-This generates `dist/index.js`.
-
-### 3. Run Locally (via Stdio)
-
-To test the server on the command line:
-
-```bash
-# PowerShell
-$env:PENQWIN_API_KEY="your_key"
-$env:PENQWIN_ORG_ID="your_org"
-$env:PENQWIN_REPO="your_repo"
-$env:PENQWIN_API_URL="http://localhost:3000"
-node dist/index.js
-```
+| Environment Variable | Description                                       | Example                  |
+| :------------------- | :------------------------------------------------ | :----------------------- |
+| `PENQWIN_API_KEY`    | Machine-to-machine API key generated from the DB  | `ed_live_0e21cf14...`    |
+| `PENQWIN_ORG_ID`     | The organization ID associated with the API key   | `0db9f7b5-7206-...`      |
+| `PENQWIN_REPO`       | The repository owner and name to target           | `<org_name>/<repo_name>` |
+| `PENQWIN_API_URL`    | The REST API gateway URL of the `penqwin` backend | `http://app.penqwin.com` |
 
 ---
 
@@ -147,3 +106,11 @@ If you have cloned the repository locally and compiled it:
 
 - **Command**: `node`
 - **Args**: `["d:/Projects/EngDoc/eng-doc-mcp/dist/index.js"]`
+
+---
+
+Learn more:
+
+- [Penqwin MCP](https://www.penqwin.com/mcp)
+- [MCP Protocol](https://modelcontextprotocol.io/docs/getting-started)
+- [Model Context Protocol - Wikipedia](https://en.wikipedia.org/wiki/Model_Context_Protocol)
